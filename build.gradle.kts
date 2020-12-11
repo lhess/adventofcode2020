@@ -1,6 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+    application
     kotlin("jvm") version "1.4.21"
 }
 
@@ -20,4 +21,8 @@ tasks.withType<KotlinCompile> {
         freeCompilerArgs = listOf("-Xjsr305=strict")
         jvmTarget = "11"
     }
+}
+
+application {
+    mainClass.set("adventofcode2020.AdventOfCode2020Application")
 }
